@@ -192,8 +192,7 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
                 pac.setConvenio(convenio.getIdConvenio());
 
             } else {
-                JOptionPane.showMessageDialog(this,
-                        "Selecione um convenio");
+                pac.setConvenio(6);
             } // fecha else
 
            // Criando objeto PacienteDAO para cadastrar o paciente no banco de dados
@@ -202,6 +201,8 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
 
             // Mensagem de sucesso
             JOptionPane.showMessageDialog(this, "Paciente cadastrado com sucesso!");
+            
+            this.limpar();
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this,
@@ -259,7 +260,6 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
 
     private void jbCadastrar1ActionPerformed(java.awt.event.ActionEvent evt) {
         cadastrar();
-        limpar();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
