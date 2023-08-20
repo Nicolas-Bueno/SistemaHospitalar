@@ -193,7 +193,7 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
 
             } else {
                 JOptionPane.showMessageDialog(this,
-                        "Selecione um produto");
+                        "Selecione um convenio");
             } // fecha else
 
            // Criando objeto PacienteDAO para cadastrar o paciente no banco de dados
@@ -213,8 +213,12 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
     //apaga valores dos campos
     private void limpar() {
         jtNome.setText("");
-        jtEndereco.setText("");
         jtCpf.setText("");
+        jtRG.setText("");
+        jtEndereco.setText("");
+        jtTelefone.setText("");
+        jtEmail1.setText("");
+        jtDataNasc.setText("");
     }// fecha método
 
     
