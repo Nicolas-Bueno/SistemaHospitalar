@@ -41,7 +41,6 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
         jtEndereco = new javax.swing.JTextField();
         jlEspecialidade = new javax.swing.JLabel();
         jlDataNasc = new javax.swing.JLabel();
-        jtDataNasc = new javax.swing.JTextField();
         jtTelefone = new javax.swing.JTextField();
         jlTelefone = new javax.swing.JLabel();
         jlEmail1 = new javax.swing.JLabel();
@@ -49,6 +48,7 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
         jlRG = new javax.swing.JLabel();
         jtRG = new javax.swing.JTextField();
         jcConvenio = new javax.swing.JComboBox<>();
+        jtDataNasc = new javax.swing.JFormattedTextField();
         jLayeredPane2 = new javax.swing.JLayeredPane();
         jbLimpar = new javax.swing.JButton();
         jbCadastrar1 = new javax.swing.JButton();
@@ -87,10 +87,6 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
         jLayeredPane1.add(jlDataNasc);
         jlDataNasc.setBounds(40, 260, 100, 30);
 
-        jtDataNasc.setToolTipText("(dd/mm/aaaa)");
-        jLayeredPane1.add(jtDataNasc);
-        jtDataNasc.setBounds(140, 260, 210, 30);
-
         jtTelefone.setToolTipText("(xx) xxxx-xxxx");
         jLayeredPane1.add(jtTelefone);
         jtTelefone.setBounds(140, 180, 130, 30);
@@ -113,6 +109,16 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
 
         jLayeredPane1.add(jcConvenio);
         jcConvenio.setBounds(140, 300, 150, 30);
+
+        jtDataNasc.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        jtDataNasc.setToolTipText("(dd/mm/aaaa)");
+        jtDataNasc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtDataNascActionPerformed(evt);
+            }
+        });
+        jLayeredPane1.add(jtDataNasc);
+        jtDataNasc.setBounds(140, 260, 130, 30);
 
         jLayeredPane2.setBackground(new java.awt.Color(255, 255, 255));
         jLayeredPane2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -160,6 +166,10 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jtDataNascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtDataNascActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtDataNascActionPerformed
 
     private void cadastrar() {
         try {
@@ -277,7 +287,7 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jlRG;
     private javax.swing.JLabel jlTelefone;
     private javax.swing.JTextField jtCpf;
-    private javax.swing.JTextField jtDataNasc;
+    private javax.swing.JFormattedTextField jtDataNasc;
     private javax.swing.JTextField jtEmail1;
     private javax.swing.JTextField jtEndereco;
     private javax.swing.JTextField jtNome;
